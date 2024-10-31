@@ -1,0 +1,402 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 120px;
+    height: auto;
+    text-decoration: none;
+}
+
+nav {
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-select {
+    display: none; /* Oculta o select em telas maiores */
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/fundo.png') no-repeat center center/cover;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: 1;
+}
+
+.hero h2,
+.hero p,
+.cta {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+.cta {
+    background-color: #ff5733;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.produtos {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.produto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produto {
+    flex-basis: 30%;
+    margin: 1rem 0;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+}
+
+.produto h3 {
+    margin-top: 10px;
+}
+
+.sobre {
+    padding: 2rem 1rem;
+    background-color: #eee;
+    text-align: center;
+}
+
+.contato {
+    padding: 2rem 1rem;
+    background-color: #eee;
+    text-align: center;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contato form {
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contato form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contato form input,
+.contato form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* .contato form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+/* .contato form button:hover {
+    background-color: #ff5733;
+} */
+
+.social-links {
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ff5733;
+}
+
+.social-links i {
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav-container {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .produto-container {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+        width: 200px;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 10px;
+        border-top: 1px solid #444;
+    }
+
+    .nav-links li:first-child {
+        border-top: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-select {
+        display: block; /* Exibe o select em telas menores */
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .contato-container {
+        flex-direction: column;
+    }
+
+    .contato form, .social-links {
+        flex-basis: 100%;
+    }
+
+    .sobre-content {
+        flex-direction: column; /* Coloca a imagem acima do texto */
+    }
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px 25px;
+    font-size: 18px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #ff3500;
+}
+
+.show {
+    display: block !important; 
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    justify-content: center; /* Centraliza o conteúdo */
+    flex-direction: column; /* Alinha o conteúdo em coluna em telas menores */
+    text-align: center; /* Centraliza o texto */
+}
+
+.sobre-imagem {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 20px 0; /* Espaço em cima e embaixo da imagem */
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* facebook*/
+  .containerTwo:hover {
+    background-color: #00abeef1;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
