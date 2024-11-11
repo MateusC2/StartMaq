@@ -1,80 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles2.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
-    <h1>CSS-only Carousel</h1>
+    <main>
+      <div class="wrapper">
+        <input checked type="radio" name="slider" id="slide1" />
+        <input type="radio" name="slider" id="slide2" />
+        <input type="radio" name="slider" id="slide3" />
+        <input type="radio" name="slider" id="slide4" />
+        <input type="radio" name="slider" id="slide5" />
 
-    <p>This carousel is created with HTML and CSS only.</p>
+        <div class="slider-wrapper">
+          <div class="inner">
+            <article>
+              <div class="info top-left">
+                <h3>Malacca</h3>
+              </div>
+              <img
+                src="https://farm9.staticflickr.com/8059/28286750501_dcc27b1332_h_d.jpg"
+              />
+            </article>
 
-    <section class="carousel" aria-label="Gallery">
-      <ol class="carousel__viewport">
-        <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-          <div class="carousel__snapper">
-            <a href="#carousel__slide4" class="carousel__prev"
-              >Go to last slide</a
-            >
-            <a href="#carousel__slide2" class="carousel__next"
-              >Go to next slide</a
-            >
+            <article>
+              <div class="info bottom-right">
+                <h3>Cameron Highland</h3>
+              </div>
+              <img
+                src="https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg"
+              />
+            </article>
+
+            <article>
+              <div class="info bottom-left">
+                <h3>New Delhi</h3>
+              </div>
+              <img
+                src="https://farm8.staticflickr.com/7455/27879053992_ef3f41c4a0_h_d.jpg"
+              />
+            </article>
+
+            <article>
+              <div class="info top-right">
+                <h3>Ladakh</h3>
+              </div>
+              <img
+                src="https://farm8.staticflickr.com/7367/27980898905_72d106e501_h_d.jpg"
+              />
+            </article>
+
+            <article>
+              <div class="info bottom-left">
+                <h3>Nubra Valley</h3>
+              </div>
+              <img
+                src="https://farm8.staticflickr.com/7356/27980899895_9b6c394fec_h_d.jpg"
+              />
+            </article>
           </div>
-        </li>
-        <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <a href="#carousel__slide1" class="carousel__prev"
-            >Go to previous slide</a
-          >
-          <a href="#carousel__slide3" class="carousel__next"
-            >Go to next slide</a
-          >
-        </li>
-        <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <a href="#carousel__slide2" class="carousel__prev"
-            >Go to previous slide</a
-          >
-          <a href="#carousel__slide4" class="carousel__next"
-            >Go to next slide</a
-          >
-        </li>
-        <li id="carousel__slide4" tabindex="0" class="carousel__slide">
-          <div class="carousel__snapper"></div>
-          <a href="#carousel__slide3" class="carousel__prev"
-            >Go to previous slide</a
-          >
-          <a href="#carousel__slide1" class="carousel__next"
-            >Go to first slide</a
-          >
-        </li>
-      </ol>
-      <aside class="carousel__navigation">
-        <ol class="carousel__navigation-list">
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide1" class="carousel__navigation-button"
-              >Go to slide 1</a
-            >
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide2" class="carousel__navigation-button"
-              >Go to slide 2</a
-            >
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide3" class="carousel__navigation-button"
-              >Go to slide 3</a
-            >
-          </li>
-          <li class="carousel__navigation-item">
-            <a href="#carousel__slide4" class="carousel__navigation-button"
-              >Go to slide 4</a
-            >
-          </li>
-        </ol>
-      </aside>
-    </section>
+          <!-- .inner -->
+        </div>
+        <!-- .slider-wrapper -->
+
+        <div class="slider-prev-next-control">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
+          <label for="slide5"></label>
+        </div>
+        <!-- .slider-prev-next-control -->
+
+        <div class="slider-dot-control">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
+          <label for="slide5"></label>
+        </div>
+        <!-- .slider-dot-control -->
+      </div>
+    </main>
   </body>
 </html>
