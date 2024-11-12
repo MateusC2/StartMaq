@@ -21,7 +21,7 @@ header {
 }
 
 header .logo img {
-    width: 120px;
+    width: 130px;
     height: auto;
     text-decoration: none;
 }
@@ -33,6 +33,7 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
+    font-size:large;
 }
 
 .nav-links li {
@@ -82,6 +83,7 @@ nav {
 }
 
 .hero h2,
+.hero h3,
 .hero p,
 .cta {
     position: relative;
@@ -91,12 +93,18 @@ nav {
 .hero h2 {
     font-size: 3rem;
     color: #333;
+    /* opacity: 80%; */
 }
-
+.hero h3{
+  color: #333;
+  font-size: 2rem;
+  /* opacity: 80%; */
+}
 .hero p {
     font-size: 1.2rem;
     margin: 20px 0;
     color: #333;
+    /* opacity: 80%; */
 }
 
 .cta {
@@ -105,6 +113,18 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .produto {
+      flex-direction: column; /* Empilha a imagem e o texto verticalmente em telas pequenas */
+      align-items: center;
+  }
+
+  .produto img {
+      width: 100%; /* Faz a imagem ocupar toda a largura em telas pequenas */
+      max-width: 300px; /* Define um tamanho máximo para a imagem */
+  }
 }
 
 .produtos {
@@ -120,21 +140,27 @@ nav {
 }
 
 .produto {
-    flex-basis: 30%;
-    margin: 1rem 0;
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border: 1px solid #ddd;
+  display: flex;
+  width: 82%;
+  gap: 20px; /* Espaço entre a imagem e o texto */
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  margin: 1rem 0;
+}
+
+#produto-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .produto img {
-    width: 100%;
-    height: auto;
+  width: 25%;
+  height: auto;
+  object-fit: cover;
 }
 
-.produto h3 {
-    margin-top: 10px;
-}
 
 .produto .bola::before {
   content: "•"; /* A bolinha como marcador */
@@ -148,6 +174,11 @@ nav {
 
 
 /* Style the buttons that are used to open and close the accordion panel */
+
+
+/* #produto-duvida{
+  background-color: #eee;
+} */
 .accordion {
   background-color: #eee;
   color: #444;
@@ -166,12 +197,7 @@ nav {
 }
 
 /* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-}
+
 .accordion:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
@@ -189,6 +215,7 @@ nav {
   background-color: white;
   max-height: 0;
   overflow: hidden;
+  font-size: small;
   transition: max-height 0.2s ease-out;
 }
 /* ----------------------- */
@@ -483,7 +510,7 @@ footer {
  
   /*---- NUMBER OF SLIDE CONFIGURATION ----*/
   .wrapper {
-    max-width: 60em;
+    max-width: 100em;           /*Largura ai*/
     margin: 1em auto;
     position: relative;
   }
