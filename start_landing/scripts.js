@@ -5,11 +5,7 @@ function smoothScroll(target) {
     });
 }
 
-// Evento para a CTA
-document.querySelector('.cta').addEventListener('click', function (e) {
-    e.preventDefault();
-    smoothScroll('#produtos'); // Chama a função de rolagem suave para produtos
-});
+
 
 // Eventos para os links da navegação
 document.querySelectorAll('.nav-links a').forEach(link => {
