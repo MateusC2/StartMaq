@@ -129,12 +129,20 @@ font-size: 2rem;
 }
 }
 
+video{
+  width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+  max-width: 400px; /* Limita a largura da imagem em telas pequenas */
+}
+
 .produtos {
   padding: 1rem 1rem;
   background-color: #fff;
   text-align: center;
 }
 
+#produto-info h5{
+  font-size:medium;
+}
 
 
 .produto-container {
