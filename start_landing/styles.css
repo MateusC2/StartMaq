@@ -122,6 +122,7 @@ font-size: 2rem;
     width: 100%; /* Ocupa toda a largura em telas pequenas */
 }
 
+
 .produto img {
   
     width: 100%; /* Faz a imagem ocupar toda a largura disponível */
@@ -328,9 +329,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .produto-container {
-      flex-direction: column;
-  }
 
   .sobre h2 {
       font-size: 2rem;
